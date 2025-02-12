@@ -1,24 +1,34 @@
 // LetterScreen.js
 import React from 'react';
-import { View, Text, Image, Pressable, StyleSheet } from 'react-native';
+import {SafeAreaView, View, Text, Image, Pressable, StyleSheet , Dimensions} from 'react-native';
 import SoundButton from './SoundButton';
 import { Audio } from 'expo-av';
-
-const LetterScreen = ({ letter, soundFiles, uniqueSound, secondSoundFiles }) => {
+import { Stack , useLocalSearchParams } from 'expo-router';
+import LetterNavigation from './LetterNavigation';
+import { } from 'expo-router/build/hooks';
+  
+const { width, height } = Dimensions.get('window'); // Get screen dimensions
+const LetterScreen = ({ letter, soundFiles, uniqueSound, secondSoundFiles , route }) => {
   const playSound = async (soundFile) => {
     const { sound } = await Audio.Sound.createAsync(soundFile);
     await sound.playAsync();
   };
+  const index = useLocalSearchParams();
+  const currentLetterIndex = parseInt(index, 10) || 0;
+  const totalLetters = 28; // Total Arabic letters
+
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+       <Stack.Screen options={{title : 'حرف ' + uniqueSound.label ,headerTitleAlign:'center'}} />
       {/* Main Letter in Circle */}
       {uniqueSound && (
         <View style={styles.border}>
           <SoundButton
             label={uniqueSound.label}
             soundFile={uniqueSound.file}
-            fontSize={180}
+            fontSize={width * 0.4}
+            
           />
         </View>
       )}
@@ -79,7 +89,6 @@ const LetterScreen = ({ letter, soundFiles, uniqueSound, secondSoundFiles }) => 
       </View>
 
       {/* Images with Text Section */}
-      {/* Images with Text Section */}
       <View style={styles.imageGrid}>
         {soundFiles.map((sound, index) => (
           <Pressable
@@ -87,15 +96,24 @@ const LetterScreen = ({ letter, soundFiles, uniqueSound, secondSoundFiles }) => 
             key={index}
             onPress={() => playSound(sound.file)}
           >
-            <View style={styles.imageCircle}>
+            {/* <View style={styles.imageCircle }>
               <Image source={sound.image} style={styles.image} />
-            </View>
+            </View> */}
+
+<View style={[styles.imageCircle, { width: width * 0.25, height: width * 0.25 }]}>
+  <Image
+    source={sound.image}
+    style={[
+      styles.image,
+      { width: width * 0.25, height: width * 0.25 },
+    ]}
+  />
+</View>
             <Text style={styles.imageText}>{sound.label}</Text>
           </Pressable>
         ))}
       </View>
-
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -103,13 +121,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    paddingVertical: 20,
+    paddingVertical: 5,
     backgroundColor: '#f9f9f9',
   },
   border: {
-    width: 280,
-    height: 280,
-    borderRadius: 140,
+    // width: 280,
+    // height: 280,
+    // borderRadius: 140,
+    width: width * 0.6, // Dynamically scale size
+    height: width * 0.6,
+    borderRadius: (width * 0.6) / 2,
     borderWidth: 12,
     borderColor: '#E91E63',
     justifyContent: 'center',
@@ -120,7 +141,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 8,
     elevation: 5,
-    marginVertical: 20,
+    // marginVertical: 20,
+    marginVertical: height * 0.02,
   },
   gridContainer: {
     flexDirection: 'row',
@@ -156,8 +178,8 @@ const styles = StyleSheet.create({
   imageGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'center',
-    marginTop: 20,
+    justifyContent: 'space-between',
+    marginVertical: height * 0.02 ,
     width: '90%',
   },
   imageWrapper: {
@@ -165,9 +187,10 @@ const styles = StyleSheet.create({
     margin: 8,
   },
    imageCircle: {
-    width: 100,
-    height: 100,
-    borderRadius: 50, // Makes the image circular
+    // width: 100,
+    // height: 100,
+    // borderRadius: 50, // Makes the image circular
+    borderRadius: (width * 0.25) / 2, // Circular with dynamic size
     overflow: 'hidden', // Ensures the image doesn't spill outside the circle
     borderWidth: 2,
     borderColor: '#007AFF',
@@ -175,8 +198,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: '100%',
-    height: "100%",
+    // width: '100%',
+    // height: "100%",
     resizeMode: 'cover',
   },
   imageText: {

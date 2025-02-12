@@ -1,79 +1,84 @@
-// app/[letter]/index.js
-import { Text } from 'react-native';
-import React from 'react';
-import { useLocalSearchParams } from 'expo-router';
-import Alif from '../(letterScreens)/Alif';
-import Ba from '../(letterScreens)/Ba';
-import Ta from '../(letterScreens)/Ta';
-import Tha from '../(letterScreens)/Tha';
-import Jim from '../(letterScreens)/Jim';
-import Ha from '../(letterScreens)/Ha';
-import Kha from '../(letterScreens)/Kha';
-import Dal from '../(letterScreens)/Dal';
-import Thdal from '../(letterScreens)/Thdal';
-import Ra from '../(letterScreens)/Ra';
-import Zay from '../(letterScreens)/Zay';
-import Sin from '../(letterScreens)/Sin';
-import Shin from '../(letterScreens)/Shin';
-import Sad from '../(letterScreens)/Sad';
-import Dad from '../(letterScreens)/Dad';
-import Tta from '../(letterScreens)/Tta';
-import Thdae from '../(letterScreens)/thdae';
-import Ain from '../(letterScreens)/Ain';
-import Ghain from '../(letterScreens)/Ghain';
-import Fa from '../(letterScreens)/Fa';
-import Qaf from '../(letterScreens)/Qaf';
-import Kaf from '../(letterScreens)/Kaf';
-import Lam from '../(letterScreens)/Lam';
-import Mim from '../(letterScreens)/Mim';
-import Nun from '../(letterScreens)/Nun';
-import Hha from '../(letterScreens)/Hha';
-import Waw from '../(letterScreens)/Waw';
-import Ya from '../(letterScreens)/Ya';
-// Import other letter screens...
+import { Text, View, SafeAreaView, StyleSheet } from 'react-native';
+import React, { Suspense } from 'react';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+
+// Mapping Arabic letters to their corresponding screen components
+const letterToScreenMap = {
+  'أ': require('../(tabs)/(letterScreens)/Alif').default,
+  'ب': require('../(tabs)/(letterScreens)/Ba').default,
+  'ت': require('../(tabs)/(letterScreens)/Ta').default,
+  'ث': require('../(tabs)/(letterScreens)/Tha').default,
+  'ج': require('../(tabs)/(letterScreens)/Jim').default,
+  'ح': require('../(tabs)/(letterScreens)/Ha').default,
+  'خ': require('../(tabs)/(letterScreens)/Kha').default,
+  'د': require('../(tabs)/(letterScreens)/Dal').default,
+  'ذ': require('../(tabs)/(letterScreens)/Thdal').default,
+  'ر': require('../(tabs)/(letterScreens)/Ra').default,
+  'ز': require('../(tabs)/(letterScreens)/Zay').default,
+  'س': require('../(tabs)/(letterScreens)/Sin').default,
+  'ش': require('../(tabs)/(letterScreens)/Shin').default,
+  'ص': require('../(tabs)/(letterScreens)/Sad').default,
+  'ض': require('../(tabs)/(letterScreens)/Dad').default,
+  'ط': require('../(tabs)/(letterScreens)/Tta').default,
+  'ظ': require('../(tabs)/(letterScreens)/Thdae').default,
+  'ع': require('../(tabs)/(letterScreens)/Ain').default,
+  'غ': require('../(tabs)/(letterScreens)/Ghain').default,
+  'ف': require('../(tabs)/(letterScreens)/Fa').default,
+  'ق': require('../(tabs)/(letterScreens)/Qaf').default,
+  'كـ': require('../(tabs)/(letterScreens)/Kaf').default,
+  'ل': require('../(tabs)/(letterScreens)/Lam').default,
+  'م': require('../(tabs)/(letterScreens)/Mim').default,
+  'ن': require('../(tabs)/(letterScreens)/Nun').default,
+  'هـ': require('../(tabs)/(letterScreens)/Hha').default,
+  'و': require('../(tabs)/(letterScreens)/Waw').default,
+  'ي': require('../(tabs)/(letterScreens)/Ya').default,
+};
+
+// Get all letters in an array
+const letterList = Object.keys(letterToScreenMap);
 
 const LetterRoute = () => {
-  const { letter } =  useLocalSearchParams();
-  console.log(letter); // Check the exact letter being passed
+  const { letter } = useLocalSearchParams(); // Get the letter parameter from the route
+  const router = useRouter();
 
-  const screens = {
-    "أ" : <Alif />,
-    'ب': <Ba />,
-    'ت': <Ta/>,
-    'ث': <Tha/>,
-    'ج': <Jim />,
-    'ح': <Ha/>,
-    'خ':<Kha/>,
-    'د': <Dal/>,
-    'ذ': <Thdal/>,
-    'ر': <Ra/>,
-    "ز": <Zay/>,
-    'س': <Sin/>,
-    'ش':<Shin/>,
-    'ص':<Sad/>,
-    'ض':<Dad/>,
-    'ط': <Tta/>,
-    'ظ' : <Thdae/>,
-    'ع': <Ain/>,
-    'غ': <Ghain/>,
-    'ف': <Fa/>,
-    'ق': <Qaf/>,
-    'كـ':<Kaf/>,
-    'ل':<Lam/>,
-    'م':<Mim/>,
-    'ن':<Nun/>,
-    'هـ':<Hha/>,
-    'و':<Waw/>,
-    'ي':<Ya/>,
-  };
+  const LetterComponent = letterToScreenMap[letter] || null; // Get the screen component based on the letter
+  const currentIndex = letterList.indexOf(letter); // Get the index of the current letter
 
-  // Default fallback if the letter is not recognized
-  if (!screens[letter]) {
-    return <Text>Invalid letter</Text>;
+  // Show an error message if the letter is invalid
+  if (!LetterComponent) {
+    return <Text style={styles.errorText}>Invalid letter</Text>;
   }
 
-  return screens[letter];
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+    <View style={{ flex: 1, justifyContent: 'space-between' }}>
+      {/* Letter Screen */}
+      <View style={{ flex: 1 }}>
+        <Suspense fallback={<Text>Loading...</Text>}>
+          <LetterComponent />
+        </Suspense>
+      </View>
 
+    </View>
+    </SafeAreaView>
+  );
 };
+
+const styles = StyleSheet.create({
+ 
+  disabledButton: {
+    backgroundColor: '#ccc',
+  },
+  text: {
+    color: '#fff',
+    fontWeight: 'bold',
+  },
+  errorText: {
+    fontSize: 20,
+    color: 'red',
+    textAlign: 'center',
+    marginTop: 50,
+  },
+});
 
 export default LetterRoute;
