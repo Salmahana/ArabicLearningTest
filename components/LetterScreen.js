@@ -1,33 +1,46 @@
 // LetterScreen.js
 import React from 'react';
-import {SafeAreaView, View, Text, Image, Pressable, StyleSheet , Dimensions} from 'react-native';
+import {SafeAreaView, View, Text, Image, Pressable, StyleSheet , Dimensions, ScrollView} from 'react-native';
 import SoundButton from './SoundButton';
 import { Audio } from 'expo-av';
 import { Stack , useLocalSearchParams } from 'expo-router';
-import LetterNavigation from './LetterNavigation';
-import { } from 'expo-router/build/hooks';
+
+// import { } from 'expo-router/build/hooks';
   
 const { width, height } = Dimensions.get('window'); // Get screen dimensions
-const LetterScreen = ({ letter, soundFiles, uniqueSound, secondSoundFiles , route }) => {
-  const playSound = async (soundFile) => {
-    const { sound } = await Audio.Sound.createAsync(soundFile);
+const LetterScreen = ({ letter, soundFiles, uniqueSound, secondSoundFiles  }) => {
+
+  // const playSound = async (soundFile) => {
+  //   const { sound } = await Audio.Sound.createAsync(soundFile);
+  //   await sound.playAsync();
+  // };
+
+const playSound = async (soundFile) => {
+  try {
+    const soundObject = typeof soundFile === 'string' 
+      ? { uri: soundFile } // Remote URL
+      : soundFile; // Local file (require)
+
+    const { sound } = await Audio.Sound.createAsync(soundObject);
     await sound.playAsync();
-  };
-  const index = useLocalSearchParams();
-  const currentLetterIndex = parseInt(index, 10) || 0;
-  const totalLetters = 28; // Total Arabic letters
+  } catch (error) {
+    console.error('Error playing sound:', error);
+  }
+};
 
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.safeContainer}>
        <Stack.Screen options={{title : 'حرف ' + uniqueSound.label ,headerTitleAlign:'center'}} />
+
+       <ScrollView contentContainerStyle={styles.scrollContainer}>
       {/* Main Letter in Circle */}
       {uniqueSound && (
         <View style={styles.border}>
           <SoundButton
             label={uniqueSound.label}
             soundFile={uniqueSound.file}
-            fontSize={width * 0.4}
+            fontSize={width * 0.3}
             
           />
         </View>
@@ -55,7 +68,7 @@ const LetterScreen = ({ letter, soundFiles, uniqueSound, secondSoundFiles , rout
               <SoundButton
                 label={sound.label}
                 soundFile={sound.file}
-                fontSize={30}
+                fontSize={31}
               />
             </View>
           ))}
@@ -68,7 +81,7 @@ const LetterScreen = ({ letter, soundFiles, uniqueSound, secondSoundFiles , rout
               <SoundButton
                 label={sound.label}
                 soundFile={sound.file}
-                fontSize={30}
+                fontSize={31}
               />
             </View>
           ))}
@@ -113,24 +126,36 @@ const LetterScreen = ({ letter, soundFiles, uniqueSound, secondSoundFiles , rout
           </Pressable>
         ))}
       </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  safeContainer: {
     flex: 1,
-    alignItems: 'center',
-    paddingVertical: 5,
     backgroundColor: '#f9f9f9',
+    
   },
+  scrollContainer: {
+    flexGrow: 1,
+    alignItems: 'center',
+    paddingVertical: height * 0.01,
+  },
+
+  // container: {
+  //   flex: 1,
+  //   alignItems: 'center',
+  //   paddingVertical: 5,
+  //   backgroundColor: '#f9f9f9',
+  // },
   border: {
     // width: 280,
     // height: 280,
     // borderRadius: 140,
-    width: width * 0.6, // Dynamically scale size
-    height: width * 0.6,
-    borderRadius: (width * 0.6) / 2,
+    width: width * 0.5, // Dynamically scale size
+    height: width * 0.5,
+    borderRadius: (width * 0.5) / 2,
     borderWidth: 12,
     borderColor: '#E91E63',
     justifyContent: 'center',
@@ -142,28 +167,28 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 5,
     // marginVertical: 20,
-    marginVertical: height * 0.02,
+    marginVertical: height * 0.01,
   },
   gridContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    width: '90%',
-    marginBottom: 20,
+    width: '95%',
+    marginBottom: height * 0.01,
   },
   column: {
     flex: 1.5, // Default size for inner columns
     alignItems: 'center',
-    gap: 8,
+    gap:  height * 0.01,
   },
   outerColumn: {
-    flex: 3, // Make outer columns larger
+    flex: 4, // Make outer columns larger
     alignItems: 'center',
-    gap: 8,
+    gap:  height * 0.01,
   },
   soundButton: {
-    width: '90%',
+    width: '95%',
     alignItems: 'center',
-    padding: 8,
+    padding: height * 0.005,
     borderRadius: 8,
     borderWidth: 1,
     borderColor: '#007AFF',
@@ -173,38 +198,38 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 2,
-    marginBottom: 8,
+    marginBottom: height * 0.001,
   },
   imageGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    marginVertical: height * 0.02 ,
-    width: '90%',
+    marginVertical: height * 0.001 ,
+    width: '95%',
   },
   imageWrapper: {
     alignItems: 'center', // Centers the image and text
-    margin: 8,
+    margin: width * 0.001,
   },
    imageCircle: {
-    // width: 100,
-    // height: 100,
-    // borderRadius: 50, // Makes the image circular
+    width: width * 0.25,
+    height: width * 0.25,
     borderRadius: (width * 0.25) / 2, // Circular with dynamic size
     overflow: 'hidden', // Ensures the image doesn't spill outside the circle
     borderWidth: 2,
     borderColor: '#007AFF',
     justifyContent: 'center',
     alignItems: 'center',
+    overflow: 'hidden',
   },
   image: {
-    // width: '100%',
-    // height: "100%",
+    width: '100%',
+    height: "100%",
     resizeMode: 'cover',
   },
   imageText: {
-    marginTop: 8,
-    fontSize: 25,
+    marginTop: height * 0.01,
+    fontSize: width * 0.05,
     color: '#333',
     textAlign: 'center',
     fontWeight: 'bold',

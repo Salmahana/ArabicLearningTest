@@ -3,19 +3,19 @@ import LetterScreen from '../../../components/LetterScreen';
 
 const soundFilesForBaa = [
     
-    { label: 'بَهْلَوَانٌ', file: require('../../../assets/sounds/clown.m4a'), image: require('../../../assets/images/clown.webp') },
-    { label: 'بُرْتُقَالَةٌ', file: require('../../../assets/sounds/orange.m4a'), image: require('../../../assets/images/orange.webp') },
-    { label: 'بِنْتٌ', file: require('@/assets/sounds/girl.m4a'), image: require('../../../assets/images/girl.jpg')},
+    { label: 'بَهْلَوَانٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Ba/%D8%A8%D9%8E%D9%87%D9%92%D9%84%D9%8E%D9%88%D9%8E%D8%A7%D9%86%D9%8C.m4a', image: require('../../../assets/images/clown.webp') },
+    { label: 'بُرْتُقَالَةٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Ba/%D8%A8%D9%8F%D8%B1%D9%92%D8%AA%D9%8F%D9%82%D9%8E%D8%A7%D9%84%D9%8E%D8%A9%D9%8C.m4a', image: require('../../../assets/images/orange.webp') },
+    { label: 'بِنْتٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Ba/%D8%A8%D9%90%D9%86%D9%92%D8%AA%D9%8C.m4a', image: require('../../../assets/images/girl.jpg')},
 ];
 const uniqueSoundForBaa = {
 
-label: 'ب', file: require('../../../assets/sounds/Bae.m4a') 
+label: 'ب', file:'https://f005.backblazeb2.com/file/Hurouf/Ba/%D8%A8%D9%8E%D8%A7%D8%A1%D9%8C.m4a' 
 };
 
 const secondSoundFiles = [
-  { label:'بَ', file: require('../../../assets/sounds/ba.m4a')},
-  { label: 'بُ', file: require('../../../assets/sounds/bo.m4a')},
-  { label: 'بِ', file: require('../../../assets/sounds/be.m4a')}, 
+  { label:'بَ', file:'https://f005.backblazeb2.com/file/Hurouf/Ba/%D8%A8%D9%8Esamira.m4a'},
+  { label: 'بُ', file:'https://f005.backblazeb2.com/file/Hurouf/Ba/%D8%A8%D9%8F%D9%88.m4a'},
+  { label: 'بِ', file:'https://f005.backblazeb2.com/file/Hurouf/Ba/%D8%A8%D9%90samira.m4a'}, 
 
 ]
 

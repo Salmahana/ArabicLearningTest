@@ -5,19 +5,19 @@ import { View, Text } from 'react-native';
 
 const soundFilesForKaf = [
     // { label: 'أ', file: require('../../assets/sounds/a.m4a') },
-    { label: 'كَلْبٌ', file: require('../../../assets/sounds/lion.m4a'), image: require('../../../assets/images/dog.webp') },
-    { label: 'كُرَةٌ', file: require('@/assets/sounds/octopus.m4a'), image: require('../../../assets/images/ball.webp')},
-    { label: 'كِتَابٌ', file: require('../../../assets/sounds/goose.m4a'),image: require('../../../assets/images/book.webp')  },
+    { label: 'كَلْبٌ', file: 'https://f005.backblazeb2.com/file/Hurouf/Kaf/%D9%83%D9%8E%D9%84%D9%92%D8%A8%D9%8C.m4a ', image: require('../../../assets/images/dog.webp') },
+    { label: 'كُرَةٌ', file: 'https://f005.backblazeb2.com/file/Hurouf/Kaf/%D9%83%D9%8F%D8%B1%D9%8E%D8%A9%D9%8C.m4a ', image: require('../../../assets/images/ball.webp')},
+    { label: 'كِتَابٌ', file: 'https://f005.backblazeb2.com/file/Hurouf/Kaf/%D9%83%D9%90%D8%AA%D9%8E%D8%A7%D8%A8%D9%8C.m4a ',image: require('../../../assets/images/book.webp')  },
 ];
 const uniqueSoundForKaf = {
   label: 'كـ', 
-  file: require('../../../assets/sounds/alef.m4a'),
+  file: 'https://f005.backblazeb2.com/file/Hurouf/Kaf/%D9%83%D9%8E%D8%A7%D9%81%D9%8C.m4a ',
 };
 
 const secondSoundFiles = [
-  { label:'كَـ', file: require('../../../assets/sounds/A.m4a')},
-  { label: 'كُـ', file: require('../../../assets/sounds/O.m4a')},
-  { label: 'كِـ', file: require('../../../assets/sounds/E.m4a')}, 
+  { label:'كَـ', file: 'https://f005.backblazeb2.com/file/Hurouf/Kaf/%D9%83%D9%8E%D8%A7.m4a '},
+  { label: 'كُـ', file: 'https://f005.backblazeb2.com/file/Hurouf/Kaf/%D9%83%D9%8F%D9%88.m4a '},
+  { label: 'كِـ', file: 'https://f005.backblazeb2.com/file/Hurouf/Kaf/%D9%83%D9%90%D9%8A.m4a '}, 
 
 ]
 

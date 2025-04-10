@@ -5,19 +5,19 @@ import { View, Text } from 'react-native';
 
 const soundFilesForTha = [
     // { label: 'أ', file: require('../../assets/sounds/a.m4a') },
-    { label: 'ثَعْلَبٌ', file: require('../../../assets/sounds/fox.m4a'), image: require('../../../assets/images/fox.webp') },
-    { label: 'ثُعْبَانٌ', file: require('@/assets/sounds/snake.mp3'), image: require('../../../assets/images/snake.webp')},
-    { label: 'ثِيَابٌ', file: require('../../../assets/sounds/clothing.mp3'),image: require('../../../assets/images/clothing.jpg')  },
+    { label: 'ثَعْلَبٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Tha/%D8%AB%D9%8E%D8%B9%D9%92%D9%84%D9%8E%D8%A8%D9%8C(2).m4a', image: require('../../../assets/images/fox.webp') },
+    { label: 'ثُعْبَانٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Tha/%D8%AB%D9%8F%D8%B9%D9%92%D8%A8%D9%8E%D8%A2%D9%86%D9%8C.m4a', image: require('../../../assets/images/snake.webp')},
+    { label: 'ثِيَابٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Tha/%D8%AB%D9%90%D9%8A%D9%8E%D8%A7%D8%A8%D9%8C(1).m4a',image: require('../../../assets/images/clothing.jpg')  },
 ];
 const uniqueSoundForTha = {
   label: 'ث', 
-  file: require('../../../assets/sounds/thae.m4a'),
+  file:'https://f005.backblazeb2.com/file/Hurouf/Tha/%D8%AB%D9%8E%D8%A7%D8%A1%D9%8C(1).m4a',
 };
 
 const secondSoundFiles = [
-  { label:'ثَ', file: require('../../../assets/sounds/A.m4a')},
-  { label: 'ثُ', file: require('../../../assets/sounds/O.m4a')},
-  { label: 'ثِ', file: require('../../../assets/sounds/E.m4a')}, 
+  { label:'ثَ', file:'https://f005.backblazeb2.com/file/Hurouf/Tha/%D8%AB%D9%8E.m4a'},
+  { label: 'ثُ', file:'https://f005.backblazeb2.com/file/Hurouf/Tha/%D8%AB%D9%8F.m4a'},
+  { label: 'ثِ', file:'https://f005.backblazeb2.com/file/Hurouf/Tha/%D8%AB%D9%90.m4a'}, 
 
 ]
 

@@ -5,19 +5,19 @@ import { View, Text } from 'react-native';
 
 const soundFilesForHha = [
     // { label: 'أ', file: require('../../assets/sounds/a.m4a') },
-    { label: 'هَرَمٌ', file: require('../../../assets/sounds/lion.m4a'), image: require('../../../assets/images/pyramid.webp') },
-    { label: 'هُدْهُدٌ', file: require('@/assets/sounds/octopus.m4a'), image: require('../../../assets/images/hoopoe.webp')},
-    { label: 'هِلَالٌ', file: require('../../../assets/sounds/goose.m4a'),image: require('../../../assets/images/crescent.webp')  },
+    { label: 'هَرَمٌ', file: 'https://f005.backblazeb2.com/file/Hurouf/Hha/%D9%87%D9%8E%D8%B1%D9%8E%D9%85%D9%8C.m4a ', image: require('../../../assets/images/pyramid.webp') },
+    { label: 'هُدْهُدٌ', file: 'https://f005.backblazeb2.com/file/Hurouf/Hha/%D9%87%D9%8F%D8%AF%D9%92%D9%87%D9%8F%D8%AF%D9%8C.m4a ', image: require('../../../assets/images/hoopoe.webp')},
+    { label: 'هِلَالٌ', file: 'https://f005.backblazeb2.com/file/Hurouf/Hha/%D9%87%D9%90%D9%84%D9%8E%D8%A7%D9%84%D9%8C.m4a ',image: require('../../../assets/images/crescent.webp')  },
 ];
 const uniqueSoundForHha = {
   label: 'هـ', 
-  file: require('../../../assets/sounds/alef.m4a'),
+  file: 'https://f005.backblazeb2.com/file/Hurouf/Hha/%D9%87%D9%8E%D8%A7%D8%A1%D9%8C.m4a ',
 };
 
 const secondSoundFiles = [
-  { label:'هَـ', file: require('../../../assets/sounds/A.m4a')},
-  { label: 'هُـ', file: require('../../../assets/sounds/O.m4a')},
-  { label: 'هِــ', file: require('../../../assets/sounds/E.m4a')}, 
+  { label:'هَـ', file: 'https://f005.backblazeb2.com/file/Hurouf/Hha/%D9%87%D9%8E.m4a '},
+  { label: 'هُـ',file: 'https://f005.backblazeb2.com/file/Hurouf/Hha/%D9%87%D9%8F.m4a '},
+  { label: 'هِــ', file: 'https://f005.backblazeb2.com/file/Hurouf/Hha/%D9%87%D9%90.m4a '}, 
 
 ]
 

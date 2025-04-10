@@ -1,17 +1,7 @@
-// import { Stack } from "expo-router";
-
-// export default function RootLayout() {
-//   return (
-//     <Stack >
-//       <Stack.Screen options={{headerTitleAlign:'center', title:'حروفي العربية' }} name="index" />
-      
-
-//     </Stack>
-//   );
-// }
 
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Stack } from 'expo-router';
+import { TouchableOpacity, Text } from 'react-native';
 
 export default function RootLayout() {
   return (
@@ -26,13 +16,29 @@ export default function RootLayout() {
         />
 
         {/* Dynamic [letter] Route */}
-        <Stack.Screen
+        {/* <Stack.Screen
           name="[letter]/index"
           options={{
             headerShown: true, // Show header for dynamic routes
             title: 'Dynamic Letter',
+            
           }}
+        /> */}
+
+<Stack.Screen
+          name="[letter]/index"
+          options={({ navigation }) => ({
+            headerShown: true,
+            title: 'Dynamic Letter',
+            headerLeft: () => (
+              <TouchableOpacity onPress={() => navigation.goBack()}>
+            
+            <Text style={{ color: 'blue', fontSize: 16, marginLeft: 10 }}>  الرئيسية </Text>
+              </TouchableOpacity>
+            ),
+          })}
         />
+
       </Stack>
     </GestureHandlerRootView>
   );

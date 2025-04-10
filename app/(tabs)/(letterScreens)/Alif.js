@@ -5,19 +5,20 @@ import { View, Text } from 'react-native';
 
 const soundFilesForAlif = [
     // { label: 'أ', file: require('../../assets/sounds/a.m4a') },
-    { label: 'أَسَدٌ', file: require('../../../assets/sounds/octopus.mp3'), image: require('../../../assets/images/Asad.webp') },
-    { label: 'أُخْطُبُوطٌ', file: require('@/assets/sounds/octopus.m4a'), image: require('../../../assets/images/okhtobout.jpg')},
-    { label: 'إِوَزَّةٌ', file: require('../../../assets/sounds/goose.m4a'),image: require('../../../assets/images/ewaza.jpg')  },
+    { label: 'أَسَدٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Alef/lion.m4a', image: require('../../../assets/images/Asad.webp') },
+    { label: 'أُخْطُبُوطٌ',file: 'https://f005.backblazeb2.com/file/Hurouf/Alef/octopus.m4a' , image: require('../../../assets/images/okhtobout.jpg')},
+    { label: 'إِوَزَّةٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Alef/goose.m4a',image: require('../../../assets/images/ewaza.jpg')  },
+    // file: require('@/assets/sounds/octopus.m4a')
 ];
 const uniqueSoundForAlif = {
   label: 'أ', 
-  file: require('../../../assets/sounds/alef.m4a'),
+  file: 'https://f005.backblazeb2.com/file/Hurouf/Alef/%D8%A3%D9%8E%D9%84%D9%90%D9%81%D9%8C.m4a',
 };
 
 const secondSoundFiles = [
-  { label:'أَ', file: require('../../../assets/sounds/a.mp3')},
-  { label: 'أُ', file: require('../../../assets/sounds/A.m4a')},
-  { label: 'إِ', file: require('../../../assets/sounds/E.m4a')}, 
+  { label:'أَ', file:'https://f005.backblazeb2.com/file/Hurouf/Alef/A-aicha.m4a' },
+  { label: 'أُ', file:'https://f005.backblazeb2.com/file/Hurouf/Alef/O-aicha.m4a'},
+  { label: 'إِ', file:'https://f005.backblazeb2.com/file/Hurouf/Alef/E-aicha.m4a'}, 
 
 ]
 

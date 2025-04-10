@@ -5,19 +5,19 @@ import { View, Text } from 'react-native';
 
 const soundFilesForMim = [
     // { label: 'أ', file: require('../../assets/sounds/a.m4a') },
-    { label: 'مَاءٌ', file: require('../../../assets/sounds/lion.m4a'), image: require('../../../assets/images/water.webp') },
-    { label: 'مُعَلِّمَةٌ', file: require('@/assets/sounds/octopus.m4a'), image: require('../../../assets/images/teacher.webp')},
-    { label: 'مِنْطَادٌ', file: require('../../../assets/sounds/goose.m4a'),image: require('../../../assets/images/balloon.webp')  },
+    { label: 'مَاءٌ', file: 'https://f005.backblazeb2.com/file/Hurouf/Mim/%D9%85%D9%8E%D8%A7%D8%A1%D9%8C.m4a ', image: require('../../../assets/images/water.webp') },
+    { label: 'مُعَلِّمَةٌ',  file: 'https://f005.backblazeb2.com/file/Hurouf/Mim/%D9%85%D9%8F%D8%B9%D9%8E%D9%84%D9%91%D9%90%D9%85%D9%8E%D8%A9%D9%8C.m4a ', image: require('../../../assets/images/teacher.webp')},
+    { label: 'مِنْطَادٌ',  file: 'https://f005.backblazeb2.com/file/Hurouf/Mim/%D9%85%D9%90%D9%86%D9%92%D8%B7%D9%8E%D8%A7%D8%AF%D9%8C.m4a ',image: require('../../../assets/images/balloon.webp')  },
 ];
 const uniqueSoundForMim = {
   label: 'م', 
-  file: require('../../../assets/sounds/alef.m4a'),
+  file: 'https://f005.backblazeb2.com/file/Hurouf/Mim/%D9%85%D9%90%D9%8A%D9%85%D9%8C.m4a ',
 };
 
 const secondSoundFiles = [
-  { label:'مَـ', file: require('../../../assets/sounds/A.m4a')},
-  { label: 'مُـ', file: require('../../../assets/sounds/O.m4a')},
-  { label: 'مِـ', file: require('../../../assets/sounds/E.m4a')}, 
+  { label:'مَـ', file: 'https://f005.backblazeb2.com/file/Hurouf/Mim/%D9%85%D9%8E%D8%A7.m4a '},
+  { label: 'مُـ', file: 'https://f005.backblazeb2.com/file/Hurouf/Mim/%D9%85%D9%8F.m4a '},
+  { label: 'مِـ',  file: 'https://f005.backblazeb2.com/file/Hurouf/Mim/%D9%85%D9%90.m4a '}, 
 
 ]
 

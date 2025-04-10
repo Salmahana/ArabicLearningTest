@@ -5,19 +5,19 @@ import { View, Text } from 'react-native';
 
 const soundFilesForGhain = [
     // { label: 'أ', file: require('../../assets/sounds/a.m4a') },
-    { label: 'غَزَالٌ', file: require('../../../assets/sounds/lion.m4a'), image: require('../../../assets/images/gazelle.webp') },
-    { label: 'غُرَابٌ', file: require('@/assets/sounds/octopus.m4a'), image: require('../../../assets/images/crow.webp')},
-    { label: 'غِذَاءٌ', file: require('../../../assets/sounds/goose.m4a'),image: require('../../../assets/images/food.webp')  },
+    { label: 'غَزَالٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Ghain/%D8%BA%D9%8E%D8%B2%D9%8E%D8%A7%D9%84%D9%8C.m4a ', image: require('../../../assets/images/gazelle.webp') },
+    { label: 'غُرَابٌ', file: 'https://f005.backblazeb2.com/file/Hurouf/Ghain/%D8%BA%D9%8F%D8%B1%D9%8E%D8%A7%D8%A8%D9%8C.m4a ', image: require('../../../assets/images/crow.webp')},
+    { label: 'غِذَاءٌ', file: 'https://f005.backblazeb2.com/file/Hurouf/Ghain/%D8%BA%D9%90%D8%B0%D9%8E%D8%A7%D8%A1%D9%8C.m4a ',image: require('../../../assets/images/food.webp')  },
 ];
 const uniqueSoundForGhain = {
   label: 'غ', 
-  file: require('../../../assets/sounds/alef.m4a'),
+  file: 'https://f005.backblazeb2.com/file/Hurouf/Ghain/%D8%BA%D9%8E%D9%8A%D9%92%D9%86%D9%8C.m4a ',
 };
 
 const secondSoundFiles = [
-  { label:'غَـ', file: require('../../../assets/sounds/A.m4a')},
-  { label: 'غُـ', file: require('../../../assets/sounds/O.m4a')},
-  { label: 'غِـ', file: require('../../../assets/sounds/E.m4a')}, 
+  { label:'غَـ', file: 'https://f005.backblazeb2.com/file/Hurouf/Ghain/%D8%BA%D9%8E.m4a '},
+  { label: 'غُـ', file: 'https://f005.backblazeb2.com/file/Hurouf/Ghain/%D8%BA%D9%8F.m4a '},
+  { label: 'غِـ', file: 'https://f005.backblazeb2.com/file/Hurouf/Ghain/%D8%BA%D9%90.m4a '}, 
 
 ]
 

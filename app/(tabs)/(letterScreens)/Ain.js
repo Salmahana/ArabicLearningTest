@@ -5,19 +5,19 @@ import { View, Text } from 'react-native';
 
 const soundFilesForAin = [
     // { label: 'عَلَمٌ', file: require('../../assets/sounds/lion.m4a'), image: require('../../assets/images/flag.webp') },
-    { label: 'عَلَمٌ', file: require('../../../assets/sounds/lion.m4a'), image: require('../../../assets/images/flag.webp') },
-    { label: 'عُصْفُورٌ', file: require('../../../assets/sounds/octopus.m4a'), image: require('../../../assets/images/bird.webp')},
-    { label: 'عِنَبٌ', file: require('../../../assets/sounds/goose.m4a'),image: require('../../../assets/images/grapes.webp')  },
+    { label: 'عَلَمٌ', file: 'https://f005.backblazeb2.com/file/Hurouf/Ain/%D8%B9%D9%8E%D9%84%D9%8E%D9%85%D9%8C.m4a ', image: require('../../../assets/images/flag.webp') },
+    { label: 'عُصْفُورٌ', file: 'https://f005.backblazeb2.com/file/Hurouf/Ain/%D8%B9%D9%8F%D8%B5%D9%92%D9%81%D9%8F%D9%88%D8%B1%D9%8C.m4a ', image: require('../../../assets/images/bird.webp')},
+    { label: 'عِنَبٌ', file: ' https://f005.backblazeb2.com/file/Hurouf/Ain/%D8%B9%D9%90%D9%86%D9%8E%D8%A8%D9%8C.m4a',image: require('../../../assets/images/grapes.webp')  },
 ];
 const uniqueSoundForAin = {
   label: 'ع', 
-  file: require('../../../assets/sounds/alef.m4a'),
+  file: 'https://f005.backblazeb2.com/file/Hurouf/Ain/%D8%B9%D9%8E%D9%8A%D9%92%D9%86%D9%8C.m4a',
 };
 
 const secondSoundFiles = [
-  { label:'عَـ', file: require('../../../assets/sounds/A.m4a')},
-  { label: 'عُـ', file: require('../../../assets/sounds/O.m4a')},
-  { label: 'عِـ', file: require('../../../assets/sounds/E.m4a')}, 
+  { label:'عَـ', file: 'https://f005.backblazeb2.com/file/Hurouf/Ain/%D8%B9%D9%8E.m4a '},
+  { label: 'عُـ', file: 'https://f005.backblazeb2.com/file/Hurouf/Ain/%D8%B9%D9%8F.m4a '},
+  { label: 'عِـ', file: 'https://f005.backblazeb2.com/file/Hurouf/Ain/%D8%B9%D9%90.m4a '}, 
 
 ]
 

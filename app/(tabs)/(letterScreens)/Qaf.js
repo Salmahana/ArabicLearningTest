@@ -5,19 +5,19 @@ import { View, Text } from 'react-native';
 
 const soundFilesForQaf = [
     // { label: 'أ', file: require('../../assets/sounds/a.m4a') },
-    { label: 'قَلَمٌ', file: require('../../../assets/sounds/lion.m4a'), image: require('../../../assets/images/pen.webp') },
-    { label: 'قُنْفُذٌ', file: require('@/assets/sounds/octopus.m4a'), image: require('../../../assets/images/hedgehog.webp')},
-    { label: 'قِطَّةٌ', file: require('../../../assets/sounds/goose.m4a'),image: require('../../../assets/images/cat.webp')  },
+    { label: 'قَلَمٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Qaf/%D9%82%D9%8E%D9%84%D9%8E%D9%85%D9%8C.m4a ', image: require('../../../assets/images/pen.webp') },
+    { label: 'قُنْفُذٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Qaf/%D9%82%D9%8F%D9%86%D9%92%D9%81%D9%8F%D8%B0%D9%8C.m4a ', image: require('../../../assets/images/hedgehog.webp')},
+    { label: 'قِطَّةٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Qaf/%D9%82%D9%90%D8%B7%D9%91%D9%8E%D8%A9%D9%8C.m4a ',image: require('../../../assets/images/cat.webp')  },
 ];
 const uniqueSoundForQaf = {
   label: 'ق', 
-  file: require('../../../assets/sounds/alef.m4a'),
+  file:'https://f005.backblazeb2.com/file/Hurouf/Qaf/%D9%82%D9%8E%D8%A7%D9%81%D9%8C.m4a ',
 };
 
 const secondSoundFiles = [
-  { label:'قَ', file: require('../../../assets/sounds/A.m4a')},
-  { label: 'قُ', file: require('../../../assets/sounds/O.m4a')},
-  { label: 'قِ', file: require('../../../assets/sounds/E.m4a')}, 
+  { label:'قَ', file:'https://f005.backblazeb2.com/file/Hurouf/Qaf/%D9%82%D9%8E.m4a '},
+  { label: 'قُ', file:' https://f005.backblazeb2.com/file/Hurouf/Qaf/%D9%82%D9%8F.m4a'},
+  { label: 'قِ', file:'https://f005.backblazeb2.com/file/Hurouf/Qaf/%D9%82%D9%90.m4a '}, 
 
 ]
 

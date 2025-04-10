@@ -2,10 +2,25 @@ import React from 'react';
 import { TouchableOpacity, Text,StyleSheet } from 'react-native';
 import { Audio } from 'expo-av';
 
+
+
 const SoundButton = ({ label, soundFile, fontSize =20, style }) => {
+  // const playSound = async () => {
+  //   const { sound } = await Audio.Sound.createAsync(soundFile);
+  //   await sound.playAsync();
+  // };
+
   const playSound = async () => {
-    const { sound } = await Audio.Sound.createAsync(soundFile);
-    await sound.playAsync();
+    try {
+      const soundObject = typeof soundFile === 'string' 
+        ? { uri: soundFile } // Handle remote file
+        : soundFile; // Handle local file (require)
+
+      const { sound } = await Audio.Sound.createAsync(soundObject);
+      await sound.playAsync();
+    } catch (error) {
+      console.error('Error playing sound:', error);
+    }
   };
 
   return (
@@ -19,23 +34,9 @@ const SoundButton = ({ label, soundFile, fontSize =20, style }) => {
 
 const styles = StyleSheet.create({
   button: {
-    // padding: 10,
-    // backgroundColor: '#ccc',
-    // borderRadius: 5,
-    // margin: 5,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  // textWithFrame: {
-  //   padding: 10, // space between the text and the border
-  //   borderWidth: 1,
-  //   borderColor: '#007AFF',
-  //   borderRadius: 5, // for rounded corners (optional)
-  //   fontSize: 30,
-  //   color: '#333',
-  //   backgroundColor: '#fff',
-  //   textAlign: 'center',
-  // },
   buttonText: {
     color: '#333',
     textAlign: 'center',

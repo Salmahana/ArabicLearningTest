@@ -5,19 +5,19 @@ import { View, Text } from 'react-native';
 
 const soundFilesForShin = [
     // { label: 'أ', file: require('../../assets/sounds/a.m4a') },
-    { label: 'شَمْسٌ', file: require('../../../assets/sounds/lion.m4a'), image: require('../../../assets/images/sun.webp') },
-    { label: 'شُرْطِيٌ', file: require('@/assets/sounds/octopus.m4a'), image: require('../../../assets/images/police.webp')},
-    { label: 'شِرَاعٌ', file: require('../../../assets/sounds/goose.m4a'),image: require('../../../assets/images/sail.webp')  },
+    { label: 'شَمْسٌ', file: 'https://f005.backblazeb2.com/file/Hurouf/Shin/%D8%B4%D9%8E%D9%85%D9%92%D8%B3%D9%8C.m4a ', image: require('../../../assets/images/sun.webp') },
+    { label: 'شُرْطِيٌ', file: ' https://f005.backblazeb2.com/file/Hurouf/Shin/%D8%B4%D9%8F%D9%88%D8%B1%D9%92%D8%B7%D9%90%D9%8A%D9%8C.m4a', image: require('../../../assets/images/police.webp')},
+    { label: 'شِرَاعٌ', file: ' https://f005.backblazeb2.com/file/Hurouf/Shin/%D8%B4%D9%90%D8%B1%D9%8E%D8%A7%D8%B9%D9%8C.m4a',image: require('../../../assets/images/sail.webp')  },
 ];
 const uniqueSoundForShin = {
   label: 'ش', 
-  file: require('../../../assets/sounds/alef.m4a'),
+  file: ' https://f005.backblazeb2.com/file/Hurouf/Shin/%D8%B4%D9%90%D9%8A%D9%86%D9%8C.m4a',
 };
 
 const secondSoundFiles = [
-  { label:'شَـ', file: require('../../../assets/sounds/A.m4a')},
-  { label: 'شُـ', file: require('../../../assets/sounds/O.m4a')},
-  { label: 'شِـ', file: require('../../../assets/sounds/E.m4a')}, 
+  { label:'شَـ',file: 'https://f005.backblazeb2.com/file/Hurouf/Shin/%D8%B4%D9%8E.m4a '},
+  { label: 'شُـ',file: 'https://f005.backblazeb2.com/file/Hurouf/Shin/%D8%B4%D9%8F.m4a '},
+  { label: 'شِـ', file: 'https://f005.backblazeb2.com/file/Hurouf/Shin/%D8%B4%D9%90.m4a '}, 
 
 ]
 

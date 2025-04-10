@@ -5,19 +5,19 @@ import { View, Text } from 'react-native';
 
 const soundFilesForWaw = [
     // { label: 'أ', file: require('../../assets/sounds/a.m4a') },
-    { label: 'وَرَقَةٌ', file: require('../../../assets/sounds/lion.m4a'), image: require('../../../assets/images/leaf.webp') },
-    { label: 'وُرُودٌ', file: require('@/assets/sounds/octopus.m4a'), image: require('../../../assets/images/roses.webp')},
-    { label: 'وِسَادَةٌ', file: require('../../../assets/sounds/goose.m4a'),image: require('../../../assets/images/pillow.webp')  },
+    { label: 'وَرَقَةٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Waw/%D9%88%D9%8E%D8%B1%D9%8E%D9%82%D9%8E%D8%A9%D9%8C.m4a ', image: require('../../../assets/images/leaf.webp') },
+    { label: 'وُرُودٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Waw/%D9%88%D9%8F%D8%B1%D9%8F%D9%88%D8%AF%D9%8C.m4a ', image: require('../../../assets/images/roses.webp')},
+    { label: 'وِسَادَةٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Waw/%D9%88%D9%90%D8%B3%D9%8E%D8%A7%D8%AF%D9%8E%D8%A9%D9%8C.m4a ',image: require('../../../assets/images/pillow.webp')  },
 ];
 const uniqueSoundForWaw = {
   label: 'و', 
-  file: require('../../../assets/sounds/alef.m4a'),
+  file:'https://f005.backblazeb2.com/file/Hurouf/Waw/%D9%88%D9%8E%D8%A7%D9%88%D9%8C.m4a ',
 };
 
 const secondSoundFiles = [
-  { label:'وَ', file: require('../../../assets/sounds/A.m4a')},
-  { label: 'وُ', file: require('../../../assets/sounds/O.m4a')},
-  { label: 'وِ', file: require('../../../assets/sounds/E.m4a')}, 
+  { label:'وَ', file:'https://f005.backblazeb2.com/file/Hurouf/Waw/%D9%88%D9%8E.m4a'},
+  { label: 'وُ', file:'https://f005.backblazeb2.com/file/Hurouf/Waw/%D9%88%D9%8F.m4a'},
+  { label: 'وِ', file:'https://f005.backblazeb2.com/file/Hurouf/Waw/%D9%88%D9%90.m4a'}, 
 
 ]
 

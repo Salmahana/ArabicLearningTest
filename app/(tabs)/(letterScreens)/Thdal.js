@@ -5,19 +5,19 @@ import { View, Text } from 'react-native';
 
 const soundFilesForThdal = [
     // { label: 'أ', file: require('../../assets/sounds/a.m4a') },
-    { label: 'ذَهَبٌ', file: require('../../../assets/sounds/lion.m4a'), image: require('../../../assets/images/Gold.webp') },
-    { label: 'ذُرَةٌ', file: require('@/assets/sounds/octopus.m4a'), image: require('../../../assets/images/corn.webp')},
-    { label: 'ذِئْبٌ', file: require('../../../assets/sounds/goose.m4a'),image: require('../../../assets/images/wolf.webp')  },
+    { label: 'ذَهَبٌ', file: ' https://f005.backblazeb2.com/file/Hurouf/Thdal/%D8%B0%D9%8E%D9%87%D9%8E%D8%A8%D9%8C.m4a',  image: require('../../../assets/images/Gold.webp') },
+    { label: 'ذُرَةٌ', file: 'https://f005.backblazeb2.com/file/Hurouf/Thdal/%D8%B0%D9%8F%D8%B1%D9%8E%D8%A9%D9%8C.m4a ', image: require('../../../assets/images/corn.webp')},
+    { label: 'ذِئْبٌ', file: 'https://f005.backblazeb2.com/file/Hurouf/Thdal/%D8%B0%D9%90%D8%A6%D9%92%D8%A8%D9%8C.m4a ',image: require('../../../assets/images/wolf.webp')  },
 ];
 const uniqueSoundForThdal = {
   label: 'ذ', 
-  file: require('../../../assets/sounds/alef.m4a'),
+  file: 'https://f005.backblazeb2.com/file/Hurouf/Thdal/%D8%B0%D9%8E%D8%A7%D9%84%D9%8C.m4a ',
 };
 
 const secondSoundFiles = [
-  { label:'ذَ', file: require('../../../assets/sounds/A.m4a')},
-  { label: 'ذُ', file: require('../../../assets/sounds/O.m4a')},
-  { label: 'ذِ', file: require('../../../assets/sounds/E.m4a')}, 
+  { label:'ذَ', file: 'https://f005.backblazeb2.com/file/Hurouf/Thdal/%D9%80%D8%B0%D9%8E%D9%80.m4a '},
+  { label: 'ذُ', file: 'https://f005.backblazeb2.com/file/Hurouf/Thdal/%D9%80%D8%B0%D9%8F%D9%80.m4a '},
+  { label: 'ذِ', file: 'https://f005.backblazeb2.com/file/Hurouf/Thdal/%D9%80%D8%B0%D9%90%D9%80.m4a '}, 
 
 ]
 

@@ -5,19 +5,19 @@ import { View, Text } from 'react-native';
 
 const soundFilesForDad = [
     // { label: 'أ', file: require('../../assets/sounds/a.m4a') },
-    { label: 'ضَوْءٌ', file: require('../../../assets/sounds/lion.m4a'), image: require('../../../assets/images/light.webp') },
-    { label: 'ضُرُوسٌ', file: require('@/assets/sounds/octopus.m4a'), image: require('../../../assets/images/molars.webp')},
-    { label: 'ضِفْدَعٌ', file: require('../../../assets/sounds/goose.m4a'),image: require('../../../assets/images/frog.webp')  },
+    { label: 'ضَوْءٌ', file:' https://f005.backblazeb2.com/file/Hurouf/Dad/%D8%B6%D9%8E%D9%88%D9%92%D8%A1%D9%8C.m4a', image: require('../../../assets/images/light.webp') },
+    { label: 'ضُرُوسٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Dad/%D8%B6%D9%8F%D8%B1%D9%8F%D9%88%D9%88%D8%B3%D9%8C.m4a ', image: require('../../../assets/images/molars.webp')},
+    { label: 'ضِفْدَعٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Dad/%D8%B6%D9%90%D9%81%D9%92%D8%AF%D9%8E%D8%B9%D9%8C.m4a ',image: require('../../../assets/images/frog.webp')  },
 ];
 const uniqueSoundForDad = {
   label: 'ض', 
-  file: require('../../../assets/sounds/alef.m4a'),
+  file:'https://f005.backblazeb2.com/file/Hurouf/Dad/%D8%B6%D9%8E%D8%A7%D8%AF%D9%8C.m4a ',
 };
 
 const secondSoundFiles = [
-  { label:'ضَـ', file: require('../../../assets/sounds/A.m4a')},
-  { label: 'ضُـ', file: require('../../../assets/sounds/O.m4a')},
-  { label: 'ضِـ', file: require('../../../assets/sounds/E.m4a')}, 
+  { label:'ضَـ', file:'https://f005.backblazeb2.com/file/Hurouf/Dad/%D8%B6%D9%8E.m4a '},
+  { label: 'ضُـ', file:'https://f005.backblazeb2.com/file/Hurouf/Dad/%D8%B6%D9%8F.m4a '},
+  { label: 'ضِـ', file:'https://f005.backblazeb2.com/file/Hurouf/Dad/%D8%B6%D9%90.m4a '}, 
 
 ]
 
