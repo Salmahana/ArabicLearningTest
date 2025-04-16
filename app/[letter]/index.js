@@ -2,6 +2,10 @@ import { Text, View, SafeAreaView, StyleSheet } from 'react-native';
 import React, { Suspense } from 'react';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 
+export const unstable_settings = {
+  drawer: null,
+};
+
 // Mapping Arabic letters to their corresponding screen components
 const letterToScreenMap = {
   'أ': require('../(tabs)/(letterScreens)/Alif').default,

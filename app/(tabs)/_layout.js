@@ -3,6 +3,11 @@ import { Tabs } from 'expo-router/tabs';
 import { StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons'; // Import Ionicons for icons
 
+export const unstable_settings = {
+  drawer: null,
+};
+
+
 export default function TabsLayout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>

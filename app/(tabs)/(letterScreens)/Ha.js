@@ -6,7 +6,7 @@ import { View, Text } from 'react-native';
 const soundFilesForHa = [
     // { label: 'أ', file: require('../../assets/sounds/a.m4a') },
     { label: 'حَلْوَى', file:'https://f005.backblazeb2.com/file/Hurouf/Ha/%D8%AD%D9%8E%D9%84%D9%92%D9%88%D9%8E%D9%89(1).m4a', image: require('../../../assets/images/candy.webp') },
-    { label: 'حُوتٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Ha/%D8%AD%D9%8F%D9%88%D8%AA%D9%8C(2).m4a ', image: require('../../../assets/images/whale.jpg')},
+    { label: 'حُوتٌ', file:'https://f005.backblazeb2.com/file/Hurouf/Ha/%D8%AD%D9%8F%D9%88%D8%AA%D9%8C(2).m4a', image: require('../../../assets/images/whale.jpg')},
     { label: 'حِذَاءٌ', file:' https://f005.backblazeb2.com/file/Hurouf/Ha/%D8%AD%D9%90%D8%B0%D9%8E%D8%A7%D8%A1%D9%8C(1).m4a',image: require('../../../assets/images/shoes.jpg')  },
 ];
 const uniqueSoundForHa = {

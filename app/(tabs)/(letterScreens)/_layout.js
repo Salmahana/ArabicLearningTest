@@ -3,6 +3,10 @@
 import { Drawer } from 'expo-router/drawer';
 import { Text, View, StyleSheet } from 'react-native';
 
+export const unstable_settings = {
+  drawer: null,
+};
+
 const letterList = [
   { letter: 'أ', name: 'Alif' },
   { letter: 'ب', name: 'Ba' },
